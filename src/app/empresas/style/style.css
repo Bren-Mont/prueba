@@ -1,0 +1,18 @@
+.new-button{
+    background-color: #333366;
+    color: #ffffff;
+}
+.content-up{
+    display: flex;
+    justify-content: space-between;
+}
+.card-units{
+    position: absolute;
+    margin-top: 90px;
+    left: 58%;
+    transform: translate(-50%, -25%);
+    padding-top: 5px;
+}
+.MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-regular.MuiTablePagination-toolbar.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar{
+    display: none;
+}

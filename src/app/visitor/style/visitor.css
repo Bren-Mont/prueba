@@ -1,0 +1,67 @@
+.container-residents{
+    position: absolute;
+    margin-top: 130px;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+.card-custom{
+    border-radius: 1.5rem;
+}
+.tittlesApp{
+    color: #0099cc !important;
+}
+.border-gray-500 {
+    --tw-border-opacity: 1;
+    border-color: #0099cc !important;
+}
+.subTittlesAppTwoAuth{
+    font-family: 'test';
+    font-size: 16px;
+    color: rgb(24, 7, 63);
+  }
+
+.button-send{
+    display: flex;
+    justify-content: center;
+}
+.button-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    border-color: transparent;
+    border-width: 0;
+}
+.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon{
+   color:#0099cc
+}
+.color-button{
+    background-color:#0099cc !important; 
+    color: #ffff;
+}
+.color-button-add{
+    background-color:aliceblue !important; 
+}
+:where(.css-dev-only-do-not-override-xu9wm8).ant-picker .ant-picker-input >input:placeholder-shown{
+    font-size: 16px;
+    color: #000000;
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background-color: #fff;
+   
+    border-radius: 20px;
+    box-shadow: 24px;
+    padding: 40px;
+  }
+  .text-modal {
+    display: flex;
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: 10px;
+  }

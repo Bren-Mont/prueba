@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'test';
+  src: url('./assets/dunkin/dunkinSansBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.tittlesApp {
+  font-family: 'test' !important;
+  font-size: 30px !important;
+  color: #666666 !important;
+}
+.subTittlesApp{
+  font-family: 'test' !important;
+  font-size: 30px !important; 
+  color: #0099cc !important;
+}
+.subTittlesAppTwo{
+  font-family: 'test' !important;
+  font-size: 16px !important;
+  color: #666666!important;
+}

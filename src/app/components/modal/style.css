@@ -1,0 +1,15 @@
+.custom-modal .text-custom-modal{
+    display: flex;
+  }
+   .custom-modal .text-custom-modal .icon{
+    margin-top: 7%;
+    gap: 5px;
+  
+  }
+  .custom-modal .buttons-custom-modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
+  }

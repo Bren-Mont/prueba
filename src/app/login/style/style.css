@@ -1,0 +1,20 @@
+body{
+    background-image: url("../../assets/images-login/Static/BANNER_LOGIN.png") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .centered-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 37.5rem;
+}
+
+.tittle{
+  display: flex;
+  justify-content: center;
+}
+.button-send{
+  color: #ffffff;
+}
