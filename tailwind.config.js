@@ -5,7 +5,6 @@ module.exports = {
     autoprefixer: {},
     ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
   },
-
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',

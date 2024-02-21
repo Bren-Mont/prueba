@@ -5,7 +5,7 @@ const singletonEnforcer = Symbol();
 
 const location = {
     protocol: 'http:',
-    host: '127.0.0.1:8000/',
+    host: 'pre-minutapp.azurewebsites.net/',
 
 }
 

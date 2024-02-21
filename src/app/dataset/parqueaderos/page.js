@@ -1,10 +1,11 @@
-"use client";
+'use client'
 
+import ListUnitParking from "./components/ListUnitParking"
 
-import React from 'react'
-
-export default function page() {
-  return (
-    <div>page</div>
-  )
+export default function Unit (){
+    return(
+    <div>
+        <ListUnitParking />
+    </div>
+    )
 }
