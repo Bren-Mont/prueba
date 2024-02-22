@@ -15,15 +15,19 @@ import Logo from "@/app/assets/images-login/Static/usohorizontal.png";
 import ApiService from "@/app/Infraestructure/axios";
 
 import "./style/style.css";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 import { useAuthContext } from "../Contexts/authContext";
-//import LottieLoader from "../components/lottie-loader/LottieLoader";
+import LottieLoader from "@/app/components/lottie-loader/LottieLoader";
+import MessageToast from "@/app/components/toast/MessageToast";
+import MessageToastConfirm from "@/app/components/toast/MessageToastConfirm";
 
 export default function Login() {
   const [error, setError] = useState(null);
-  const {token, setToken} = useAuthContext();
-  const [showLottie, setShowLottie] = useState(false);
-  const router = useRouter()
+  const { token, setToken } = useAuthContext();
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [confirmMessage, setConfirmMessage] = useState(null);
+  const router = useRouter();
   const defaultValues = {
     email: "",
     password: "",
@@ -49,24 +53,33 @@ export default function Login() {
     ),
   });
 
-  const onSubmit = async ({email, password}) => {
+  const onSubmit = async ({ email, password }) => {
     try {
-      const {data} = await ApiService.post('api/token/', {
+      setLoading(true);
+      const { data } = await ApiService.post("api/token/", {
         username: email,
         // email,
-        password
-      })
-      setToken(data.access)
-      router.push('/visitor')
-
+        password,
+      });
+      setConfirmMessage("Guardado exitosamente");
+      setToken(data.access);
+      router.push("/test");
     } catch (error) {
-      setError("Error al validar el usuario. Por favor, inténtalo de nuevo.");
+      setErrorMessage(
+        "Error al validar el usuario. Por favor, inténtalo de nuevo."
+      );
+    } finally {
+      setLoading(false);
+      console.log(loading);
     }
   };
 
   return (
     <form name="login" noValidate onSubmit={handleSubmit(onSubmit)}>
-      <Container maxWidth="md" className="flex justify-center items-center mt-24 rounded-lg">
+      <Container
+        maxWidth="md"
+        className="flex justify-center items-center mt-24 rounded-lg"
+      >
         <Card sx={{ width: 380 }}>
           <CardContent>
             <Grid container spacing={{ xs: 2, md: 3 }}>
@@ -145,6 +158,19 @@ export default function Login() {
               </Grid>
             </Grid>
           </CardContent>
+          <LottieLoader show={loading} />
+          {confirmMessage && (
+            <MessageToastConfirm
+              message={errorMessage}
+              onClose={() => setConfirmMessage(null)}
+            />
+          )}
+          {errorMessage && (
+            <MessageToast
+              message={errorMessage}
+              onClose={() => setErrorMessage(null)}
+            />
+          )}
         </Card>
       </Container>
     </form>
