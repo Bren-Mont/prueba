@@ -66,7 +66,7 @@ export default function Login() {
 
   return (
     <form name="login" noValidate onSubmit={handleSubmit(onSubmit)}>
-      <Container maxWidth="md" className="centered-card rounded-lg">
+      <Container maxWidth="md" className="flex justify-center items-center mt-24 rounded-lg">
         <Card sx={{ width: 380 }}>
           <CardContent>
             <Grid container spacing={{ xs: 2, md: 3 }}>
@@ -137,7 +137,7 @@ export default function Login() {
               <Grid item xs={12} md={12}>
                 <Button
                   variant="outlined"
-                  className="w-full bg-sky-600 button-send "
+                  className="w-full bg-sky-600 text-white"
                   type="submit"
                 >
                   Ingresar
